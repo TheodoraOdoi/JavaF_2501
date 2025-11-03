@@ -17,6 +17,20 @@ public class LoopsFirstTenInts
         for(n = 1; n <= 10; n++)
             System.out.printf("%02d\n",n);
         
+        System.out.println("First ten integers using a while loop");
+        n = 1; // re-assign n to 1
+        while(n <= 10)
+        {
+            System.out.printf("%02d\n",n);
+            n++;
+        }
+        System.out.println("First ten integers using a do...while loop");
         
+        n = 1; // re-assign n to 1
+        do
+        {
+            System.out.printf("%02d\n",n);
+            n++;
+        }while(n <= 10);
     }
 }

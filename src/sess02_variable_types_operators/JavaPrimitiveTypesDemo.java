@@ -53,7 +53,7 @@ public class JavaPrimitiveTypesDemo
         System.out.println("3. MINIMUM & MAXIMUM VALUES FOR EACH PRIMITIVE TYPE ");
         System.out.println("-------------------------------------------------------------");
         System.out.printf("%-10s %-25s %-25s\n", "Type", "Minimum Value", "Maximum Value");
-        System.out.println("-------------------------------------------------------------");
+        System.out.println("-".repeat(55)); // repeat the quoted character/string (int) times
         System.out.printf("%-10s %-25d %-25d\n", "byte", (int) Byte.MIN_VALUE, (int) Byte.MAX_VALUE);
         System.out.printf("%-10s %-25d %-25d\n", "short", (int) Short.MIN_VALUE, (int) Short.MAX_VALUE);
         System.out.printf("%-10s %-25d %-25d\n", "int", (int) Integer.MIN_VALUE, (int) Integer.MAX_VALUE);
