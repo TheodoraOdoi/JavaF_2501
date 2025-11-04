@@ -1,4 +1,4 @@
-clspackage sess02_variable_types_operators;
+package sess02_variable_types_operators;
 
 /**
  * Java program to demonstrate precedence among the various operators.
