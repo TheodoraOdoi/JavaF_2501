@@ -11,15 +11,16 @@ public class EvenNumbersContinue
     // main method begins program execution
     public static void main(String[] args)
     {
-        System.out.println("Even numbers between 20 t0 50");
+        //Variables to be used in the program
+        int num = 20;
+        System.out.println("The even numbers between 20 t0 50 are: ");
         
-        for (int n = 20; n = <= 50; n++)
+        for (; num <= 50; num++)
         {
-            if(n % 2 != 0)
-            {
+            if(num % 2 == 1)
                 continue;
-            }
+            System.out.printf("%d, ", num);
         }
-        System.out.println(n);
+        System.out.println("");
     }
 }
