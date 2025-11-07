@@ -31,6 +31,14 @@ public class SimpleMathDemo
         
         // display the result of the arithmetic operations
         System.out.println("+".repeat(50));
-        System.out.println("");
+        System.out.println("Results of various arithmetic operations");
+        System.out.println("+".repeat(50));
+        System.out.printf("%d + %d = %d\n", firstNum, secondNum, sum);
+        System.out.printf("%d - %d = %d\n", firstNum, secondNum, difference);
+        System.out.printf("%d X %d = %d\n", firstNum, secondNum, product);
+        System.out.printf("%d / %d = %d\n", firstNum, secondNum, quotient);
+        System.out.printf("%d ^ %d = %.1f\n", firstNum, secondNum, exponent);
+        System.out.printf("%d %% %d = %d\n", firstNum, secondNum, remainder);
+        System.out.println("+".repeat(50));
     }
 }

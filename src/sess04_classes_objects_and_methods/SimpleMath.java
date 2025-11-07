@@ -29,7 +29,7 @@ public class SimpleMath
      * 
      * @return the difference of the two integers as an value
      */
-    public long subtractNums(int num1, int num2)
+    public int subtractNums(int num1, int num2)
     {
         return num1 - num2;
     }
@@ -55,7 +55,7 @@ public class SimpleMath
      * 
      * @return the quotient of the two integers as a long value
      */
-    public long divideNums(int num1, int num2)
+    public int divideNums(int num1, int num2)
     {
         if (num2 == 0)
         {
@@ -76,5 +76,18 @@ public class SimpleMath
     public int getModulus(int num1, int num2)
     {
         return num1 % num2;
+    }
+    
+    /**
+     * This method returns the exponent of the two integers passed in.
+     * 
+     * @param num1 the first integer to be used in the modulus operation.
+     * @param num2 the second integer to be used in the modulus operation.
+     * 
+     * @return the exponent of the two integers as a long value
+     */
+    public float getExponent(int num1, int num2)
+    {
+        return num1 ^ num2;
     }
 }

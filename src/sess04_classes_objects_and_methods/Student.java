@@ -38,6 +38,7 @@ public class Student
         System.out.println("Student ID: " + this.studentID);
         System.out.println("Student's Name: " + this.name);
         System.out.println("Student's Age: " + this.age);
-        System.out.println("Student's Gender: " + (this.gender == 'm' || this.gender == 'M'));
+        System.out.println("Student's Gender: " + (this.gender == 'm' || this.gender == 'M'? "Male":"Female"));
+        System.out.println("#".repeat(50));
     }
 }
