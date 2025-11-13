@@ -49,5 +49,71 @@ public class TwoDimArrayScoreAnalysis
         meanScore = new float[numOfModules];
         grade = new char[numofStudents];
         comment = new String[numofStudents];
+        
+        //prompt the user for each student's score in each subject
+        for(i = 0; i < studentNames.length; i++)
+        {
+            totalScore[n] = 0; // initialize each student's total score to zero
+            for(i = 0; i < moduleNames.length; i++)
+            {
+                System.out.printf("\nPlease enter %'s score in %s ->",studentNames[n], moduleNames[i]);
+                studScore[n][i] = sc.nextInt();
+                //calculate each studen'ts total score
+                totalScore[n] += studScore[n][i];
+            }
+            // calculate each student's mean score
+            meanScore[n] = totalScore[n] / (float) moduleNames.length;
+            // Assign a grade based on the student's mean score
+            if(meanScore[n] >= 70)
+                grade[n] = 'A';
+            else if(meanScore[n] >= 60)
+                grade[n] = 'B';
+            else if(meanScore[n] >= 50)
+                grade[n] = 'C';
+            else if(meanScore[n] >= 40)
+                grade[n] = 'D';
+            else
+                grade[n] = 'E';
+            
+            //Assign a comment based on the student's mean grade
+            switch(grade[n])
+            {
+                case 'A':
+                    comment[n] = "Excellent!";
+                    break;
+                case 'B':
+                    comment[n] = "Very Good!";
+                    break;
+                case 'C':
+                    comment[n] = "gOOD!";
+                    break;
+                case 'D':
+                    comment[n] = "Fair!";
+                    break;
+                case 'E':
+                    comment[n] = "Try Harder!";
+                    break;
+            }
+        }
+        
+        // close the input stream
+        sc.close();
+        
+        // Display the results
+        System.out.printf("%-14s","Student Name");
+        for(n = 0; n < moduleNames.length; n++)
+        {
+            System.out.printf("%-12s", moduleNames[n]);
+        }
+        System.out.printf("%-12s", "Total","Average","Grade","Comment");
+        for(n = 0; n < studentNames.length; n++)
+        {
+            System.out.printf("%-14s",studentNames[n]);
+            for(i = 0; i < moduleNames.length; i++)
+            {
+                System.out.printf("%-12d", studScore[n][i]);
+            }
+            System.out.printf("%-12s %-12s %-12s %12s%n", "Total","Average","Grade","Comment");
+        }
     }
 }
