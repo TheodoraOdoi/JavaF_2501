@@ -26,7 +26,7 @@ public class GreetUser
         sc.close();
         
         // Greet the user
-        System.out.println("Hello" + username + "from Java Programming!"); 
+        System.out.println(" Hello " + username + " from Java Programming!"); 
     }
     
 }
