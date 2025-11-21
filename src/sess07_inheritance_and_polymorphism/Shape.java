@@ -9,7 +9,7 @@ package sess07_inheritance_and_polymorphism;
  */
 public abstract class Shape
 {
-    String name;
+    protected String name;
     
     public abstract String getName();
 }
