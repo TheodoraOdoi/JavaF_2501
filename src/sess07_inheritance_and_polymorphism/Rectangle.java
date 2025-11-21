@@ -1,7 +1,7 @@
 package sess07_inheritance_and_polymorphism;
 
 /**
- * The {@code Rectangle} class represents a 2-dimentional rectangle 
+ * The {@code Rectangle} class represents a 2-dimensional rectangle 
  * with its length & width. It provides methods to compute its area and perimeter.
  * 
  * @author todoi
@@ -21,33 +21,29 @@ public class Rectangle extends Shape
      */
     protected int width;
 
+    //=============================================
+    // Getters and Setters
+    //=============================================
     /**
-     * @return the length
+     * returns the length of the rectangle (in units)
+     * 
+     * @return the rectangle's length (in units)
      */
     public int getLength()
     {
         return length;
     }
-
-    /**
-     * @param length the length to set
-     */
+    
     public void setLength(int length)
     {
         this.length = length;
     }
 
-    /**
-     * @return the width
-     */
     public int getWidth()
     {
         return width;
     }
 
-    /**
-     * @param width the width to set
-     */
     public void setWidth(int width)
     {
         this.width = width;
@@ -56,6 +52,7 @@ public class Rectangle extends Shape
     //=============================================
     // Constructors
     //=============================================
+    
     public Rectangle()
     {
         this.length = 0;
@@ -79,12 +76,12 @@ public class Rectangle extends Shape
      * 
      * @return  the rectangle's area (in square units)
      */
-     private String calcArea()
+     protected long calcArea()
     {
         return length * width;
     }
 
-    private String calcPerimeter()
+    protected long calcPerimeter()
     {
         return 2 * (length + width);
     }
@@ -92,7 +89,8 @@ public class Rectangle extends Shape
     //=============================================
     // Overriden methods
     //=============================================
-    @override
+    
+    @Override
     public String getName()
     {
         return this.name;
@@ -109,6 +107,4 @@ public class Rectangle extends Shape
                 + "\n Perimeter: " + this.calcPerimeter()
                 + "\n" + "-".repeat(50);
     }
-
-
 }

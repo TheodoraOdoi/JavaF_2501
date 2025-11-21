@@ -59,7 +59,7 @@ public class Cuboid extends Rectangle
     //=============================================
     
     /**
-     * Calculates and returns the rectangle's area(in square units)
+     * Calculates and returns the cuboid's surface area(in square units)
      * 
      * @return  the rectangle's area (in square units)
      */
@@ -68,7 +68,7 @@ public class Cuboid extends Rectangle
         return 2 *(this.calcArea() + width * breadth + length * breadth); // 2(lw + wb+ lb
     }
 
-    protected long calaVolume()
+    protected long calcVolume()
     {
         return this.calcArea() * this.breadth;
     }
