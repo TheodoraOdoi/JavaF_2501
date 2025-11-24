@@ -1,9 +1,12 @@
 package sess08_interfaces_and_nested_classes;
 
 /**
- * The {@code I3DShape} interface represents a 3-dimentional geometric
- * shap. it defines contracts for calculating the surface area & volume of the 
- * of the {@link #calcSurfaceAre
+ * The {@code I3DShape} interface represents a 3-dimensional geometric
+ * shape. it defines contracts for calculating the surface area & volume of the 
+ * of the {@link #calcSurfaceArea.
+ * Any class that implements this interface must provide its own implementation 
+ * of the {@link #calcSurfaceArea()}, & {@link #calcVolume()} methods.
+ * 
  * @author todoi
  * @version 1.0
  */

@@ -43,10 +43,9 @@ public class Sphere extends Circle implements I3Dshape
     @Override
     public String toString()
     {
-        return this.getName() + " Details"
+        //return this.getName() + " Details"
                 //+ "\n" + "-".repeat(50)
-                //+ "\n radius: " + this.radius
-                //+ "\n Width: " + this.width
+                //+ "\n Radius: " + this.radius
                 //+ "\n Surface Area: " + this.calcSurfaceArea()
                 //+ "\n Volume: " + this.calcVolume()
                 //+ "\n" + "-".repeat(50);

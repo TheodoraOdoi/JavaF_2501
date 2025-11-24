@@ -8,46 +8,31 @@ import sess07_inheritance_and_polymorphism.Shape;
  */
 public class Circle extends Shape implements I2DShape
 {
+    
     //=============================================
     // Instance fields
     //=============================================
     /**
-     * The length of the rectangle (in units)
+     * The radius of the circle(in units)
      */
-    protected int length;
-    
-    /**
-     * The width of the rectangle (in units)
-     */
-    protected int width;
-    int radius;
+    protected int radius;
 
     //=============================================
     // Getters and Setters
     //=============================================
     /**
-     * returns the length of the rectangle (in units)
+     * returns the radius of the circle (in units)
      * 
-     * @return the rectangle's length (in units)
+     * @return the circle's radius (in units)
      */
-    public int getLength()
+    public int getRadius()
     {
-        return length;
+        return radius;
     }
     
-    public void setLength(int length)
+    public void setRadius(int radius)
     {
-        this.length = length;
-    }
-
-    public int getWidth()
-    {
-        return width;
-    }
-
-    public void setWidth(int width)
-    {
-        this.width = width;
+        this.radius = radius;
     }
     
     //=============================================
@@ -67,32 +52,13 @@ public class Circle extends Shape implements I2DShape
     }
     
     //=============================================
-    // Instance methods
-    //=============================================
-    
-    /**
-     * Calculates and returns the rectangle's area(in square units)
-     * 
-     * @return  the rectangle's area (in square units)
-     */
-     protected long calcArea()
-    {
-        return length * width;
-    }
-
-    protected long calcCircumference()
-    {
-        return 2 * (length + width);
-    }
-    
-    //=============================================
     // Overriden methods
     //=============================================
     
     @Override
     public String getName()
     {
-        return Circle;
+        return this.name;
     }
     
     @Override
@@ -101,36 +67,20 @@ public class Circle extends Shape implements I2DShape
         return (float) (Math.PI * Math.pow(radius, 2));
     }
     
-    public float calcCircumference()
-    {
-        return (float) (Math.PI * (radius * 2));
-    }
-    
     @Override
     public String toString()
     {
         return this.getName() + " Details"
                 + "\n" + "-".repeat(50)
-                + "\n radius: " + this.radius
+                + "\n Radius: " + this.radius
                 + "\n Area: " + this.calcArea()
                 + "\n Circumference: " + this.calcCircumference()
                 + "\n" + "-".repeat(50);
     }
-
-    @Override
-    public float calcSurfaceArea()
+    
+    public float calcCircumference()
     {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return (float) (Math.PI * (radius * 2));
     }
-
-    @Override
-    public float calcVolume()
-    {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void setRadius(int i)
-    {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
 }
