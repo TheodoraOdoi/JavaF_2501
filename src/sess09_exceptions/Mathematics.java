@@ -1,14 +1,15 @@
 package sess09_exceptions;
 
 /**
- *
+ * Java program to demonstrate NumberFormatException and ArithmeticException
+ * 
  * @author todoi
  */
 public class Mathematics
 {
-    //===========================
+    //==================================================
     // Class Methods
-    //===========================
+    //==================================================
     public static long addNums(String num1, String num2) throws InvalidNumberFormatException
     {
         try

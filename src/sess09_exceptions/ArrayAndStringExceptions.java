@@ -19,17 +19,17 @@ public class ArrayAndStringExceptions
         int[] numbers = {10, 20, 30, 40, 50};
         try
         {
-            System.out.println("Try to access index 10, while the array size " "is: " + numbers.length + "...");
-            System.out.println("Element at index 10 is : + numbers[10]);
+            System.out.println("Try to access index 10, while the array size " + "is: " + numbers.length + "...");
+            System.out.println("Element at index 10 is : " + numbers[10]);
         } catch (ArrayIndexOutOfBoundsException aiobe)
         {
             System.err.println("Caught: " + aiobe + ""
             + "\nMessage: " + aiobe.getLocalizedMessage()
-            );
+            + "\nValid indices are 0 to " + (numbers.length -1));
         }
     }
     
-    //2. Trying to access an index that doesn't exist
+    //2. Using a null array reference
     private static void demoNullPointerException()
     {
         System.out.println("2. NullPointerException (Array)");
@@ -39,7 +39,7 @@ public class ArrayAndStringExceptions
         try
         {
             System.out.println("Try to get the number of elements(length) the " + "null data array " + data.length + "...");
-            System.out.println("Element at index 10 is : + numbers[10]);
+            System.out.println("Element at index 10 is : " + numbers[10]);
         } catch (NullPointerException npe)
         {
             System.err.println("Caught: " + npe + ""
@@ -49,7 +49,7 @@ public class ArrayAndStringExceptions
         }
     }
     
-    //3. Trying to access an index that doesn't exist
+    //3. Storing the wrong type in an object[] array
     private static void demoArrayStoreException()
     {
         System.out.println("3. ArrayStoreException (Array)");
@@ -70,23 +70,24 @@ public class ArrayAndStringExceptions
         }
     }
     
-    //4. Trying to access an index that doesn't exist
+    // 4. Creating an array with negative size
     private static void demoNegativeArraySizeException()
     {
-        System.out.println("4. NegativeArraySizeException ");
-        System.out.println("-> Occurs when you try to use a negative value for \n");
-        
-        int[] data = null;
+
+        System.out.println("4. NegativeArraySizeException :");
+        System.out.println("Occurs when you try use a negative value for the array size.");
+
+        int size = -4;
+
         try
         {
-            System.out.println("Try to get the number of elements(length) the " + "null data array " + data.length + "...");
-            System.out.println("Element at index 10 is : + numbers[10]);
-        } catch (NegativeArraySizeException npe)
+            int[] mass = new int[size];
+            System.out.println("The mass array has been successfully created");
+        } catch (NegativeArraySizeException nass)
         {
-            System.err.println("Caught: " + npe + ""
-                    + "\nYou must first initialize the data array: "
-                    + "\nSuggested fix/solution int[] data = new int [5]; // or any "
-                    + "other number for array size. ");
+            System.err.println("Caught: " + nass
+                    + "\nThe size of the array cannot be negative!");
         }
     }
+
 }
