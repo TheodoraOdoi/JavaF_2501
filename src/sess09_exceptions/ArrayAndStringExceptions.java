@@ -39,7 +39,6 @@ public class ArrayAndStringExceptions
         try
         {
             System.out.println("Try to get the number of elements(length) the " + "null data array " + data.length + "...");
-            System.out.println("Element at index 10 is : " + numbers[10]);
         } catch (NullPointerException npe)
         {
             System.err.println("Caught: " + npe + ""
