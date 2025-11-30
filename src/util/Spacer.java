@@ -1,0 +1,15 @@
+package util;
+
+/**
+ *
+ * @author Window
+ */
+public class Spacer
+{
+    // Utility method for the visual separation
+    public final static void separator()
+    {
+        System.out.println("-".repeat(75));
+        System.out.println();
+    }
+}
