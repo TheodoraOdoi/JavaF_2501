@@ -22,7 +22,7 @@ import java.time.format.DateTimeFormatter;
 public class LocalDateTimeMonthDayDemo
 {
     //==================================================
-    // 1. Demonstrate the local class
+    // 1. Demonstrate the LocalDate class
     //===================================================
     private static void demoLocalDate()
     {
@@ -52,7 +52,7 @@ public class LocalDateTimeMonthDayDemo
         
     }
     
-     //==================================================
+    //==================================================
     // 2. Demonstrate the LocalTime class
     //===================================================
     private static void demoLocalTime()
@@ -80,7 +80,7 @@ public class LocalDateTimeMonthDayDemo
                 + "Current secnd: %d\n", now.getHour(), now.getMinute(), now.getSecond());
     }
     
-     //==================================================
+    //==================================================
     //3. Demonstrate the LocalDateTime class
     //===================================================
     private static void demoLocalDateTime()
@@ -100,16 +100,15 @@ public class LocalDateTimeMonthDayDemo
         System.out.println("The date & time 3 days from now will be: " + threeDaysLater);
         
         //LocalDateTime fiveHoursEarlier = now.minusHours(5)
-        LocalDateTime fiveHoursEarlier = today.plusHours(5);
-        System.out.println("The time 5 hours ago was" + fiveHoursEarlier(5));
+        System.out.println("The time 5 hours ago was" + now.minusHours(5));
         
         //Format the LocalDateTime using a custom formatter
-        DateTimeFormatter formatter = DateTimeFormatter.ofParttern("EEEE, dd-mm-yyyy HH;mm:ss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, dd-mm-yyyy HH;mm:ss");
         String formattedDateTime = now.format(formatter);
         System.out.println("The formatted current time is:\n" + formattedDateTime);  
     }
     
-     //==================================================
+    //==================================================
     //4. Demonstrate the local class
     //===================================================
     private static void demoMonthDay()
@@ -138,18 +137,23 @@ public class LocalDateTimeMonthDayDemo
     // main method begind program execution
     public static void main(String[] args)
     {
-        //Demonstrate the local class
-    demoLocalDate();
-    Spacer.separator();
+        //Demonstrating the LocalDate class
+        demoLocalDate();
+        Spacer.separator();
+        
+        //Demonstrating the LocalTime class
+        demoLocalTime();
+        Spacer.separator();
+
+        //Demonstrating the LocalDateTime class
+        demoLocalDateTime();
+        Spacer.separator();
+        
+        //Demonstrating the MonthDay Class
+        demoMonthDay();
+        Spacer.separator();
     
-    demoLocalTime();
-    Spacer.separator();
     
-    demoLocalDateTime();
-    Spacer.separator();
-    
-    demoLocalMonthDay();
-    Spacer.separator();
     }
     
 }
